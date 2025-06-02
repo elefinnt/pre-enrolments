@@ -132,4 +132,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Sonner](https://sonner.emilkowal.ski/)
 
 ## Please Note
-No user data is stored in this app. This app holds no child, parent, address, phone number OR email address. 
+
+No user data is stored in this app. This app holds no child, parent, address, phone number OR email address.
