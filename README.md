@@ -1,29 +1,135 @@
-# Create T3 App
+# Pre-Enrollment Helper Application
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A modern, user-friendly web application designed to streamline the pre-enrollment process for schools. Built with Next.js, TypeScript, and Shadcn UI components.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Multi-step Form Process**: A guided, step-by-step enrollment form that breaks down the process into manageable sections
+- **Dynamic Parent/Guardian Management**: Add or remove multiple parents/guardians
+- **Smart Date Calculations**:
+  - Automatic age calculation
+  - Enrollment year determination
+  - Term date calculations
+  - Next available intake dates
+- **Clipboard Integration**: Copy all enrollment details with a single click
+- **Responsive Design**: Works seamlessly on all device sizes
+- **Modern UI**: Built with Shadcn UI components for a polished look and feel
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Tech Stack
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **UI Components**: Shadcn UI
+- **Styling**: Tailwind CSS
+- **Form Validation**: Built-in HTML5 validation
+- **Date Handling**: date-fns
+- **Notifications**: Sonner
+- **Package Manager**: pnpm
 
-## Learn More
+## Getting Started
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Prerequisites
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- Node.js 18+
+- pnpm
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Installation
 
-## How do I deploy this?
+1. Clone the repository:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+```bash
+git clone [repository-url]
+cd pre-enrollment
+```
+
+2. Install dependencies:
+
+```bash
+pnpm install
+```
+
+3. Run the development server:
+
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Form Structure
+
+The pre-enrollment form is divided into four main steps:
+
+1. **Child Information**
+
+   - Full Name
+   - Gender
+   - Date of Birth
+   - Automatic enrollment calculations
+
+2. **Parent/Guardian Information**
+
+   - Multiple parent/guardian support
+   - Relationship selection
+   - Contact details (name, phone, email)
+
+3. **Address Information**
+
+   - Complete home address details
+
+4. **Summary**
+   - Complete enrollment summary
+   - Copy to clipboard functionality
+   - Next steps information
+
+## Validation Rules
+
+- **Names**: Text only, minimum 2 characters
+- **Phone Numbers**: Numbers only
+- **Email**: Valid email format
+- **Address**: Minimum 5 characters
+- **Required Fields**: All fields are mandatory
+
+## Development
+
+### Project Structure
+
+```
+src/
+├── app/                 # Next.js app directory
+├── components/          # React components
+│   ├── ui/             # Shadcn UI components
+│   └── pre-enrolment-form.tsx
+├── styles/             # Global styles
+└── lib/                # Utility functions
+```
+
+### Adding New Features
+
+1. Create new components in the `components` directory
+2. Add new utility functions in the `lib` directory
+3. Update the form validation as needed
+4. Test thoroughly before committing
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [date-fns](https://date-fns.org/)
+- [Sonner](https://sonner.emilkowal.ski/)
+
+## Please Note
+No user data is stored in this app. This app holds no child, parent, address, phone number OR email address. 
